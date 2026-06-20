@@ -270,3 +270,20 @@ details {
   border: 2px solid $grey-color-light;
   margin-top: 0;
 }
+
+@media (min-width: 768px) {
+  .row:not(.no-dividers) > .col-md-6:nth-child(odd):not(:last-child),
+  .row:not(.no-dividers) > .col-md-8:first-child:not(:last-child) {
+    position: relative;
+  }
+  .row:not(.no-dividers) > .col-md-6:nth-child(odd):not(:last-child)::after,
+  .row:not(.no-dividers) > .col-md-8:first-child:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 15%;
+    bottom: 15%;
+    right: 0;
+    width: 1px;
+    background-color: #dee2e6;
+  }
+}
